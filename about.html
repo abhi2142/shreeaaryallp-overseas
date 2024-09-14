@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> 
+    <title>About</title>
+    <style>
+        body {
+            background-color: #f1f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f9f5f5;
+            color: #090909;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-family: serif;
+            font-weight: bold;
+        }
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #020202;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            color: #080808;
+        }
+        .container {
+            margin-top: 5%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .custom-section, .custom-section1, .custom-section2, .custom-section3, .custom-section4, .custom-section5, .custom-section6, .custom-section7 {
+            padding: 20px;
+            border-radius: 8px;
+            color: #0c0c0c;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            margin-bottom: 20px;
+        }
+        .custom-section {
+            background-color: rgba(2, 70, 91, 0.681);
+        }
+        .custom-section1 {
+            background-color: rgba(2, 70, 91, 0.681);
+        }
+        .custom-section2 {
+            background-color: rgba(243, 246, 247, 0.681);
+        }
+        .custom-section3 {
+            background-color: rgba(247, 251, 252, 0.681);
+        }
+        .custom-section4 {
+            background-color: rgba(242, 246, 248, 0.681);
+        }
+        .custom-section5 {
+            background-color: rgba(235, 241, 243, 0.681);
+        }
+        .custom-section6 {
+            background-color: rgba(240, 242, 243, 0.681);
+        }
+        .custom-section7 {
+            background-color: rgba(236, 241, 243, 0.681);
+        }
+        
+        /* Ensure sections are responsive */
+        .custom-section, .custom-section1, .custom-section7 {
+            width: 100%;
+        }
+        .custom-section2, .custom-section3, .custom-section4, .custom-section5, .custom-section6 {
+            width: 100%;
+        }
+        
+        @media (min-width: 768px) {
+            .custom-section {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .custom-section1, .custom-section7 {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .custom-section2, .custom-section3, .custom-section4, .custom-section5, .custom-section6 {
+                width: 45%;
+            }
+            .custom-section2, .custom-section4 {
+                margin-left: 5%;
+            }
+            .custom-section3, .custom-section6 {
+                margin-left: 30%;
+            }
+            .custom-section5 {
+                margin-left: 15%;
+            }
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #02312f;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        /* Table responsiveness */
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <button class="back-button" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="header-content">
+                <h1>About Us</h1>
+            </div>
+        </header>
+        <div class="container">
+            <section class="custom-section">
+                <p>We specialize in trading a variety of goods and packaging, providing comprehensive export and import services. Our sea and air freight solutions, including FCL, LCL, door-to-door shipments, air exports, air imports, and air consols, are designed to meet the diverse needs of our clients. With a focus on efficiency and reliability, we tailor our services to ensure seamless transportation and maximum client satisfaction.</p>
+            </section>
+            <section class="custom-section1">
+                <h1>Problem</h1>
+                <p>Businesses face significant challenges in navigating complex export-import procedures and ensuring reliable, cost-effective logistics solutions that meet their unique requirements.</p>
+                <section class="custom-section2">
+                    <h1>Operational Delays</h1>
+                    <p>Inefficient logistics and complex EX-IM procedures can lead to delays, disrupting supply chains and impacting overall business operations.</p>
+                </section>
+                <section class="custom-section3">
+                    <h1>Increased Costs</h1>
+                    <p>High shipping costs and hidden charges can strain budgets, reducing profitability and competitiveness in the global market.</p>
+                </section>
+                <section class="custom-section4">
+                    <h1>Client Dissatisfaction</h1>
+                    <p>Inconsistent delivery times and lack of customized logistics solutions can lead to dissatisfaction among clients, potentially harming long-term business relationships.</p>
+                </section>
+            </section>
+            <section class="custom-section1">
+                <h1>Solutions</h1>
+                <section class="custom-section7">
+                    <h1>Streamlined EX-IM Procedures</h1>
+                    <p>Offer comprehensive support and expertise in export-import documentation and compliance, simplifying the process for businesses and ensuring timely completion of regulatory requirements.</p>
+                </section>
+            </section>
+            <section class="custom-section5">
+                <h1>Mission</h1>
+                <p>Our mission is to optimize logistics efficiency and provide exceptional customer service, ensuring that our clients’ goods are transported swiftly and securely across the globe.</p>
+            </section>
+            <section class="custom-section6">
+                <h1>Vision</h1>
+                <p>Our vision is to be a global leader in the logistics industry, recognized for our innovative solutions and commitment to sustainability in global trade.</p>
+            </section>
+
+            <h1>Competitive Analysis</h1>
+            <table class="table">
+                <tr>
+                    <th>Aspect</th>
+                    <th>Shreearya</th>
+                    <th>Delhivery</th>
+                </tr>
+                <tr>
+                    <td>International Shipping</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Sea Freight Services</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Air Freight Services </td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Specialized Cargo Handling</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Local Deliveries/Pick-ups</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>E-commerce Fulfillment</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

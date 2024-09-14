@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>SHREE ARYA OVERSEAS LLP</title>
+    <link rel="stylesheet" href="new.css">
+    <style>
+        .slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 450px; /* Set the height according to your preference */
+        }
+    
+        .slides {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+    
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 1s ease-in-out; /* Fades in and out over 1 second */
+        }
+    
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
+        .slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+    </style>
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>SHREE ARYA OVERSEAS LLP.</h1>
+                    <h5>Your Gateway to Global Trade</h5>
+                </div>
+            </div>
+    
+            <nav class="navbar">
+                <div class="menu-icon" id="menu-icon">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li style="font-weight:bold ;"><a href="about.html">About us</a></li>
+                    <li style="font-weight:bold ;"><a href="product.html">Product</a></li>
+                    <li style="font-weight:bold ;"><a href="service.html">Services</a></li>
+                    <li style="font-weight:bold ;"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="scroll-container">
+            <div class="scroll-text">WELCOME TO SHREE ARYA OVERSEAS LLP! CONTACT NO. +91 9009000717</div>
+        </div>
+      
+            <button onclick="openRegistrationForm()" class="btn btn-primary">Register</button>
+
+<!-- Registration Modal -->
+<div id="registrationModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Registration Form</h2>
+      <form id="registrationForm">
+          <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
+          </div>
+  
+          <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+          </div>
+  
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your email.." required>
+          </div>
+  
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Your password.." required>
+          </div>
+  
+          <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country" name="country" required>
+                  <option value="">Select your country</option>
+                  <option value="India">India</option>
+                  <option value="USA">USA</option>
+                  <option value="UK">UK</option>
+                  <option value="Australia">Australia</option>
+              </select>
+          </div>
+  
+          <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <div id="resultMessage" style="margin-top: 20px;"></div> <!-- Place to show result -->
+    </div>
+  </div>
+  
+  <!-- JavaScript to handle form submission -->
+  <script>
+      document.getElementById('registrationForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent page refresh
+  
+          // Simulating form submission processing
+          const firstName = document.getElementById('fname').value;
+          const lastName = document.getElementById('lname').value;
+          const email = document.getElementById('email').value;
+          const country = document.getElementById('country').value;
+  
+          // Show a success message
+          const resultMessage = document.getElementById('resultMessage');
+          resultMessage.innerHTML = `<p style="color: green;">Thank you, ${firstName} ${lastName}! Your registration from ${country} has been successfully submitted.</p>`;
+          
+          // Optional: You can reset the form after submission
+          document.getElementById('registrationForm').reset();
+      });
+  
+      // Function to open the modal
+      function openRegistrationForm() {
+          document.getElementById('registrationModal').style.display = 'block';
+      }
+  
+      // Function to close the modal
+      function closeRegistrationForm() {
+          document.getElementById('registrationModal').style.display = 'none';
+      }
+  
+      // Close the modal when clicking the close button
+      document.querySelector('.close').onclick = closeRegistrationForm;
+  
+      // Close the modal when clicking outside of it
+      window.onclick = function(event) {
+          if (event.target === document.getElementById('registrationModal')) {
+              closeRegistrationForm();
+          }
+      };
+  </script>
+  
+          
+        <div class="slider">
+            <div class="slides">
+                <div class="scroll-item">
+                    <img src="Logo_page-0001.jpeg" alt="Slide 16">
+                </div>
+                <div class="slide">
+                    <img src="product14.jpg.jpeg" alt="Slide 14">
+                </div>
+
+                <div class="slide">
+                    <img src="product13.jpg.jpeg" alt="Slide 13">
+                </div>
+                <div class="slide">
+                    <img src="product12.jpg.jpeg" alt="Slide 12">
+                </div>
+                <div class="slide">
+                    <img src="product11.jpg.jpeg" alt="Slide 11">
+                </div>
+                <div class="slide">
+                    <img src="product10.jpg.jpeg" alt="Slide 10">
+                </div>
+                <div class="slide">
+                    <img src="product15.jpg.jpeg" alt="Slide 15">
+                </div>
+                <div class="slide">
+                    <img src="product4.jpg.jpeg" alt="Slide 4">
+                </div>
+                <div class="slide">
+                    <img src="resize-17237899062128299739product5.jpg" alt="Slide 5">
+                </div>
+                <div class="slide">
+                    <img src="resize-17237894161473483734product6.jpg" alt="Slide 6">
+                </div>
+                <div class="slide">
+                    <img src="product1.jpg.jpeg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="resize-17237896701715518791product2.jpg" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="resize-1723789614891089676product3.jpg" alt="Slide 3">
+                </div>
+                <div class="slide">
+                    <img src="product7.jpg.jpeg" alt="Slide 7">
+                </div>
+                <div class="slide">
+                    <img src="resize-1723789768421927628product8.jpg" alt="Slide 8">
+                </div>
+                <div class="slide">
+                    <img src="resize-17237895031838172873product9.jpg" alt="Slide 9">
+                </div>
+            </div>
+        </div>
+
+        <section class="custom-section custom-section1">
+            <h1 style="color: brown; font-weight: bold;">About Us</h1>
+            <p>We specialize in trading a variety of goods and packaging, providing comprehensive export and import services. Our sea and air freight solutions, including FCL, LCL, door-to-door shipments, air exports, air imports, and air consols, are designed to meet the diverse needs of our clients. With a focus on efficiency and reliability, we tailor our services to ensure seamless transportation and maximum client satisfaction.</p>
+        </section>
+        
+        <section class="custom-section custom-section3">
+            <h2 style="color: brown; font-weight: bold;">Mission</h2>
+            <p>To streamline global trade by offering efficient and reliable logistics solutions, ensuring seamless transportation and exceeding client expectations with tailored services.</p>
+        </section>
+        
+        <section class="custom-section custom-section4">
+            <h2 style="color: brown; font-weight: bold;">Vision</h2>
+            <p>To become a trusted leader in the logistics industry, renowned for innovation, integrity, and personalized customer care, driving sustainable growth and global connectivity.</p>
+        </section>
+        
+        <section class="services-section">
+            <h2 style="color: brown; font-weight: bold;">Our Services</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="service-item">
+                            <h3>1. Sea Freight Services:</h3>
+                            <p>* Full Container Loads (FCL) - EX-IM<br>
+                               * Less Container Loads (LCL) - EX-IM<br>
+                               * Door to Door Shipments</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-item">
+                            <h3>2. Air Freight Services:</h3>
+                            <p>* Air Exports<br>
+                               * Air Imports<br>
+                               * Air Consols</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-item">
+                            <h3>3. Specialized Cargo</h3>
+                            <p>* Over-Dimension Cargo Handling</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact-section">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 style="color: brown; font-weight: bold;">Contact Us</h2>
+                    <p>For inquiries, please reach out to us through the following:</p>
+                    <p>Email: <a href="mailto:shreearyaoverseas@gmail.com">shreearyaoverseasllp@gmail.com</a></p>
+                    <p>Phone: +91 9009000717,6262-656366</p>
+                    <p style="width: 70%;">Address: 15 Sampat Hills, Bicholi Mardana, Indore, Madhya Pradesh, India, 452016</p>
+        
+                    <!-- Google Map Embed -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.093285151071!2d75.83086211518163!3d22.758627885161438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39629fb36dd7ef77%3A0x7d7527f56c99f20b!2s15%20Sampat%20Hills%2C%20Bicholi%20Mardana%2C%20Indore%2C%20Madhya%20Pradesh%20452016!5e0!3m2!1sen!2sin!4v1630667566895!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>        
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; Thanks for visiting my page </p>
+    </footer>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>       
+
+   <!-- Slider Script for Fade Transition -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+        const slideInterval = 3000; // Time between slides (3 seconds)
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.opacity = 1;
+                    slide.style.zIndex = 1;
+                } else {
+                    slide.style.opacity = 0;
+                    slide.style.zIndex = 0;
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        // Auto-slide every few seconds
+        setInterval(nextSlide, slideInterval);
+
+        // Initialize the first slide
+        showSlide(currentIndex);
+    });
+</script>
+<script>
+    function openRegistrationForm() {
+        document.getElementById('registrationModal').style.display = 'block';
+    }
+
+    function closeRegistrationForm() {
+        document.getElementById('registrationModal').style.display = 'none';
+    }
+
+    // Close the modal when clicking the close button
+    document.querySelector('.close').onclick = closeRegistrationForm;
+
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target === document.getElementById('registrationModal')) {
+            closeRegistrationForm();
+        }
+    };
+</script>
+
+</body>
+</html>

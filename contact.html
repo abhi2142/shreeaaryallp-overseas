@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <title>Contact</title>
+    <style>
+        body {
+            background-color: #f2f7f8;
+        }
+        header {
+            background-color: #f4f9f8;
+            border-style: double;
+            color: #080808;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-family: serif;
+            font-weight: bold;
+        }
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #080808;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            color: #ddd;
+        }
+        .contact-section {
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #080000;
+            border-radius: 10px;
+            background-color: rgba(215, 218, 219, 0.262);
+            width: 90%;
+            max-width: 600px;
+        }
+        .contact-info {
+            color: #060606; 
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+        .contact-info h2 {
+            color: brown;
+        }
+        .social-icons {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(212, 217, 218, 0.262);
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .social-icons a {
+            color: #191818;
+            font-size: 2em;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #ddd;
+        }
+        /* Media queries for responsiveness */
+        @media (max-width: 992px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .back-button {
+                font-size: 1.3em;
+            }
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.7em;
+            }
+            .back-button {
+                font-size: 1.2em;
+            }
+            .contact-section {
+                padding: 15px;
+            }
+            .social-icons a {
+                font-size: 1.5em;
+            }
+        }
+        @media (max-width: 576px) {
+            header h1 {
+                font-size: 1.4em;
+            }
+            .back-button {
+                font-size: 1.1em;
+            }
+            .contact-section {
+                padding: 10px;
+                margin-top: 15%;
+            }
+            .social-icons a {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <button class="back-button" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="header-content">
+                <h1>Contact Us</h1>
+            </div>
+        </header>
+        <section class="contact-section">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>For inquiries, please reach out to us through the following:</p>
+                <p>Email: <a href="mailto:shreearyaoverseas@gmail.com">shreearyaoverseas@gmail.com</a></p>
+                <p>Phone: <a href="tel:+919009000717">+91 9009000717</a></p>
+                <p>Address: 15 Sampat Hills, Bicholi Mardana, Indore, Madhya Pradesh, India, 452016</p>
+            </div>
+        </section>
+    </div>
+    <div class="social-icons">
+        <a href="tel:+919009000717" class="phone-icon" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://www.facebook.com/yourprofile" target="_blank" class="fab fa-facebook-f" aria-label="Facebook"></a>
+        <a href="https://www.instagram.com/yourprofile" target="_blank" class="fab fa-instagram" aria-label="Instagram"></a>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

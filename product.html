@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <title>Product</title>
+    <style>
+        body {
+            background-color: #fafcfc;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        header {
+            background-color: #fbfcfc;
+            color: #070000;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin: 0;
+            font-family: serif;
+            font-weight: bold;
+        }
+        .back-button {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #040404;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            color: #0d0d0d;
+        }
+        .container {
+            padding: 0;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .scroll-container {
+            display: flex;
+            flex-direction: column; /* Vertical scroll */
+            overflow-y: auto; /* Enable vertical scroll */
+            height: 100vh; /* Full viewport height */
+            scroll-snap-type: y mandatory; /* Snap scroll */
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        .scroll-container::-webkit-scrollbar {
+            width: 5px;
+        }
+        .scroll-container::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 5px;
+        }
+        .scroll-item {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px; /* Add padding around the image */
+        }
+        .scroll-item img {
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border: 5px solid #333; /* Add border */
+            border-radius: 10px; /* Add rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+            .scroll-item {
+                height: 70vh;
+            }
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.2em;
+            }
+            .scroll-item {
+                height: 60vh;
+            }
+        }
+        @media (max-width: 576px) {
+            .header h1 {
+                font-size: 1em;
+            }
+            .scroll-item {
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <button class="back-button" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="header-content">
+                <h1>Product Gallery</h1>
+            </div>
+        </header>
+        <section class="custom-section custom-section1">
+            <div class="container">
+                <div class="scroll-container">
+                    <div class="scroll-item">
+                        <img src="product14.jpg.jpeg" alt="Slide 14">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="product13.jpg.jpeg" alt="Slide 13">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="product12.jpg.jpeg" alt="Slide 12">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="product11.jpg.jpeg" alt="Slide 11">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="product4.jpg.jpeg" alt="Slide 4">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="product15.jpg.jpeg" alt="Slide 15">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="resize-17237899062128299739product5.jpg" alt="Slide 5">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="resize-17237894161473483734product6.jpg" alt="Slide 6">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="product1.jpg.jpeg" alt="Slide 1">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="resize-17237896701715518791product2.jpg" alt="Slide 2">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="resize-1723789614891089676product3.jpg" alt="Slide 3">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="product7.jpg.jpeg" alt="Slide 7">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="resize-1723789768421927628product8.jpg" alt="Slide 8">
+                    </div>
+                    <div class="scroll-item">
+                        <img src="resize-17237895031838172873product9.jpg" alt="Slide 9">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

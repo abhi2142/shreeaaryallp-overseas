@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Services</title>
+    <style>
+        body {
+            background-color: #eff5f6;
+        }
+        header {
+            background-color: #f1f5f4;
+            color: #070707;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+            font-family: serif;
+            font-weight: bold;
+        }
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #000;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            color: #ddd;
+        }
+        .container {
+            margin-top: 5%;
+            padding: 15px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .service-details {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: 1px solid #02312f;
+        }
+        .service-details.active {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            .container {
+                margin-top: 10%;
+            }
+        }
+        @media (max-width: 576px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            .back-button {
+                font-size: 1.2em;
+            }
+            .container {
+                padding: 10px;
+            }
+            .service-details {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <header id="header">
+            <button class="back-button" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="header-content">
+                <h1>Services</h1>
+            </div>
+        </header>
+        <div class="container">
+            <div class="mb-3">
+                <button class="btn btn-primary w-100" onclick="toggleDetails('airFreightDetails')">Air Freight</button>
+            </div>
+            <div id="airFreightDetails" class="service-details">
+                <p>* Full Container Loads (FCL) - EX-IM<br>
+                   * Less Container Loads (LCL) - EX-IM<br>
+                   * Door to Door Shipments</p>
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-primary w-100" onclick="toggleDetails('seaFreightDetails')">Sea Freight</button>
+            </div>
+            <div id="seaFreightDetails" class="service-details">
+                <p>* Air Exports<br>
+                   * Air Imports<br>
+                   * Air Consols</p>
+            </div>
+
+            <div>
+                <button class="btn btn-primary w-100" onclick="toggleDetails('specializedDetails')">Specialized Cargo</button>
+            </div>
+            <div id="specializedDetails" class="service-details">
+                <p>* Over-Dimension Cargo Handling</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function toggleDetails(id) {
+            // Hide all other service details
+            document.querySelectorAll('.service-details').forEach(function (element) {
+                if (element.id !== id) {
+                    element.classList.remove('active');
+                }
+            });
+
+            // Toggle the selected details
+            var details = document.getElementById(id);
+            details.classList.toggle('active');
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+            var isClickInside = false;
+
+            document.querySelectorAll('.service-details').forEach(function (element) {
+                if (element.contains(event.target) || event.target.matches('.btn')) {
+                    isClickInside = true;
+                }
+            });
+
+            if (!isClickInside) {
+                document.querySelectorAll('.service-details').forEach(function (element) {
+                    element.classList.remove('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
